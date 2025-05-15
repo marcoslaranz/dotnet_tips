@@ -46,7 +46,11 @@ dotnet add package Serilog.Sinks.Loki --version 3.0.0
 ### Check if all packages were installed successfully:
 ```csharp
 dotnet list package
-Get more information about the packages:
+```
+
+### Get more information about the packages:
+
+```csharp
 dotnet list package --include-transitive
 ```
 
@@ -58,6 +62,7 @@ dotnet list package-- outdated
 ## Modify your Program.cs
 
 ### Add these lines:
+
 ```csharp
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -90,9 +95,6 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 ```
  
-
- 
-
 ## Compile and test.
 Run your Grafana sever:
   Please, look at document xxx to get instructions in how to run the grafana processes
@@ -111,8 +113,11 @@ d11f8627b4da   prom/prometheus   "/bin/prometheus --c…"   4 days ago   Up 35 m
 
 
  
-If not, refer to the document load_grafana.md to learn how to run these containers.
-Run your application 
+If you need assistance, please refer to the document load_grafana.md to learn how to run these containers.
+
+
+
+## Run your application 
 
 ```csharp
 vagrant@ubuntu-jammy:~/Projects/Monitoring$ dotnet run
@@ -124,7 +129,7 @@ Building...
 [02:29:20 INF] Content root path: /home/vagrant/Projects/Monitoring
 ```
 
-### Test your webapi
+## Test your webapi
 
 ```csharp
 http://192.168.56.17:5140/weatherforecast
@@ -134,7 +139,7 @@ http://192.168.56.17:5140/weatherforecast
 
 
 
-### Check your console log:
+## Check your console log:
 
 ```csharp
 [02:30:52 INF] Request starting HTTP/1.1 GET http://192.168.56.17:5140/weatherforecast - null null
@@ -177,8 +182,23 @@ At first use:
   - Username: Admin 
   - Password: Admin
   
-- Please, to find out how to configure and create dashboards, go to Grafana: The open and composable observability platform | Grafana Labs
-Or following the guides in the application
+- Please to find out how to configure and create dashboards, go to Grafana:
+ 	Grafana Labs
+  
+```csharp
+https://grafana.com/
+```
+
+  
+Or following the guides in the application:
+
+*** The open and composable observability platform 
+
+ ```csharp
+http://192.168.56.17:3000/?orgId=1&from=now-6h&to=now&timezone=browser
+```
+ 
+*** Please, be aware that your IP and port may be different.
 
  
 ![image](https://github.com/user-attachments/assets/0df21062-b4bc-4025-bc64-044e7ebf683b)
