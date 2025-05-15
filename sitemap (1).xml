@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/issues</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/pulls</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/actions</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/security</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki/Home/_history</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/blob/main/organise_your_code.md</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/blob/main/adding_swagger.md</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/blob/main/adding_monitoring.md</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/blob/main/load_grafana.md</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/blob/main/Adding_Authorization.md</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki/_history</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki/Home/31df860c5b3f42d235499ffc51c683bbed86df62</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki/Home/a30da0252bcca3c67044e17c353837e4c53ea44c</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki/Home/911843a39142b67ebddb2a7ccd39878cd5f3dcdb</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki/Home/44aba01bba330781a03ee9b27389cb01471f08ba</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/wiki/Home/f048a07c34191e52c07f16970b91e91b4c2c09fe</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels?sort=name-asc</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels?sort=name-desc</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels?sort=count-desc</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels?sort=count-asc</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/bug</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/documentation</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/duplicate</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/enhancement</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/good%20first%20issue</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/help%20wanted</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/invalid</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/question</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/labels/wontfix</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=due_date&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=due_date&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=completeness&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=completeness&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=title&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=title&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=count&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=count&amp;state=open</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=due_date&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=due_date&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=completeness&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=completeness&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=title&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=title&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=desc&amp;sort=count&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/marcoslaranz/dotnet_tips/milestones?direction=asc&amp;sort=count&amp;state=closed</loc>
+  <lastmod>2025-05-15T06:19:42+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
