@@ -1,4 +1,4 @@
-# Adding monitoring to your WebApi with Graphana
+# Adding monitoring to your WebApi with Grafana
 
 ## Create a minimal webapi:
 
