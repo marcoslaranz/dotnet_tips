@@ -1,2 +1,2 @@
 # dotnet_tips
-Document procedure to implement dotnet features
+Document the procedures to implement dotnet features
