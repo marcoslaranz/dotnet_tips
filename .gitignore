@@ -1,0 +1,69 @@
+# Compiled binary files
+bin/
+obj/
+
+# User-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.rsuser
+*.vs
+*.sln.ide
+
+# Build output
+**/Debug/
+**/Release/
+
+# Package dependencies
+packages/
+.nuget/
+
+# Logs & diagnostics
+*.log
+*.stackdump
+
+# Generated files
+*.pidb
+*.ilk
+*.pdb
+*.aps
+*.cache
+*.config
+*.tlog
+
+# Rider & Visual Studio Code workspace settings
+**/.vs/
+**/.vscode/
+
+# ASP.NET
+wwwroot/
+
+# Entity Framework migrations
+Migrations/
+
+# Dotnet artifacts
+*.dotnet_tool/
+.dotnet-tools/
+
+# Ignore temporary files
+_TemporaryFiles/
+
+# Secrets & credentials (Make sure to manage secrets properly)
+secrets.json
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Ignore test results
+TestResults/
+
+# Ignore additional user settings
+*.swp
+Thumbs.db
+desktop.ini
+
+# Ignore NuGet files
+*.nupkg
+*.snupkg
