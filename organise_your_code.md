@@ -55,6 +55,7 @@ Your WeatherforecastEndPoint.cs needs to be something like this:
 // This is necessary as we need to call the method GetWeather() that is inside a class 
 // declared in the code inside this folder:
 // OrganiseWebApi\Services\WeatherforecastService.cs
+
 using OrganiseWebApi.Services; 
 
 ![image](https://github.com/user-attachments/assets/a190ce27-deee-47bc-8fd1-4a037bb6aa80)
@@ -86,6 +87,25 @@ localhost:5003/weatherforecast
 Just so you know, the port may vary.
 
  ![image](https://github.com/user-attachments/assets/3c167303-410a-4d90-84de-080f5270a3ee)
+
+
+# Improving Dependency Injection (DI) in .NET
+
+> **Error:** The approach above works because the service method is static. However, this is not ideal for proper dependency injection.
+
+### ✅ **Recommended Fix: Using DI Properly**
+To ensure correct **Dependency Injection (DI)**, follow these steps:
+
+1. **Modify the `WeatherService`** by **removing the `static` modifier**.
+2. **Register `WeatherService`** in the `.NET Dependency Injection (DI) Container` in `Program.cs`.
+3. **Inject `WeatherService`** into the `WeatherEndpoints.cs` file instead of calling it statically.
+
+### ✅ **Fixed Code Snippets**
+
+#### **1️⃣ Register `WeatherService` in DI (`Program.cs`)**
+```csharp
+builder.Services.AddSingleton<WeatherForecastService>();
+
 
  ---
 
