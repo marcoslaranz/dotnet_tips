@@ -97,7 +97,7 @@ builder.Host.UseSerilog();
  
 ## Compile and test.
 Run your Grafana sever:
-  Please, look at document xxx to get instructions in how to run the grafana processes
+  Please, look at the wiki link 'Adding Grafana in your WebApi' to get instructions on how to run the Grafana processes
   
 Check if your servers are up and running.
 
