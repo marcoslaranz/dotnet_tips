@@ -25,6 +25,19 @@
 
 ![image](https://github.com/user-attachments/assets/3f24455d-37fa-4798-973a-14cd471b37e6)
 
+
+# Note: 
+If you don't add Swagger, you can still view the OpenAPI specification. The default minimal API template used by 'dotnet' automatically includes the OpenAPI functionality in your code (in Program.cs). When you run your program, you will be able to see this specification by using the following:
+
+
+
+ 
+ ```sh
+ http://localhost:<PORT>/openapi/v1.json
+```
+ 
+
+
 ---
 
  
