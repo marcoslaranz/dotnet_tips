@@ -1,13 +1,13 @@
 namespace OrganiseWebApi.Services;
 
-static public class WeatherService
+public class WeatherService
 {
         public static readonly string[] summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        static public IEnumerable<WeatherForecast> GetWeather()
+        public IEnumerable<WeatherForecast> GetWeather()
         {
                 return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                          (
