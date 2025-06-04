@@ -6,9 +6,10 @@ public static class WeatherEndPoint
 {
         public static WebApplication MapWeatherEndPoints(this WebApplication app)
         {
-                app.MapGet("/weatherforecast", () =>
+			    // The WeatherService is injected here
+                app.MapGet("/weatherforecast", (WeatherService wather) =>
                 {
-                    return WeatherService.GetWeather();
+                    return wather.GetWeather();
                 })
                 .WithName("GetWeatherForecast");
 
