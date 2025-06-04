@@ -47,6 +47,14 @@ IConfiguration configuration = builder.Configuration;
 // Register JwtService with configuration
 builder.Services.AddSingleton<JwtService>(sp => new JwtService(configuration));
 
+//This allows the WeatherService to be injected
+//into any class/method that needs it.
+builder.Services.AddScoped<WeatherService>();
+// As Scoped this class will be instantiated 
+// for every request and will last 
+// till the processing the whole request
+
+
 // Config Jwt token
 builder.Services.AddAuthentication("Bearer")
         .AddJwtBearer("Bearer", options => {
@@ -160,9 +168,9 @@ public static class WeatherEndPoint
                 });
 
 
-                app.MapGet("/weatherforecast", () =>
+                app.MapGet("/weatherforecast", (WeatherService weather) =>
                 {
-                        return WeatherService.GetWeatherforecast();
+                        return weather.GetWeatherforecast();
                 })
                 .RequireAuthorization(); // This ensures authentication is required for thi;
 
@@ -245,7 +253,7 @@ public class WeatherService
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        public static IEnumerable<WeatherForecast> GetWeatherforecast()
+        public IEnumerable<WeatherForecast> GetWeatherforecast()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                  (
