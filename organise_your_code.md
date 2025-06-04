@@ -27,7 +27,8 @@ cp Program.cs Services/WeatherforecastService.cs
 Remove the implementations from Program.cs for use in the Services and the Endpoints..
 
 
-![image](https://github.com/user-attachments/assets/cb6b3835-4472-47bc-bd23-08fc4a990d15)
+![image](https://github.com/user-attachments/assets/977e40e2-fc3b-445b-9f42-5a778653848e)
+
 
 
 ### Then your Program.cs will be something like this:
@@ -40,37 +41,118 @@ Remove the implementations from Program.cs for use in the Services and the Endpo
 The idea is to create a class extension for WebApplication.
 As a class extension, we need to define it as static.
 The extension method needs to be declared as receiving a parameter preceded by the word ‘this’.
-Your REST/API methods, (GET, POST, PUT, DELETE,  ..), will all be declared here; however, their functionalities will be defined in services.
+Your REST/API methods (GET, POST, PUT, DELETE, ..) will all be declared here; however, their functionalities will be defined in services.
 Starting to declare the namespace. The namespace is a path where your class is declared. This will be used for other codes to find where your code is, for example:
 
 	  D:\dotnet_tips\OrganiseWebApi\EndPoints>
 
 In the example above, the folder OrganiseWebApi is where your project was created.
-The folder EndPoints is where you will create your class EndPoint. in this case, the namespace that you will need to create is:
+The folder EndPoints is where you will create your class Endpoint. In this case, the namespace that you will need to create is:
 	OrganiseWebApi\EndPoints in C# dotnet will be OrganiseWebApi.EndPoints, then create your 
 namespace OrganiseWebApi.EndPoints;
 
 Your WeatherforecastEndPoint.cs needs to be something like this:
 
-// This is necessary as we need to call the method GetWeather() that is inside a class 
-// declared in the code inside this folder:
-// OrganiseWebApi\Services\WeatherforecastService.cs
+```sh
+// The GET method will receive a complete object WeatherforecastService. 
+// The dotnet Component container DI will be called in the
+// Program.cs to register the class WeatherforecastService.
+// Every time that this class is requested, the DI will give a complete class to
+// the requested method, so this can be used as a parameter of a method.
+```
 
-using OrganiseWebApi.Services; 
+```sh
+using OrganiseWebApi.Services;
 
-![image](https://github.com/user-attachments/assets/a190ce27-deee-47bc-8fd1-4a037bb6aa80)
+namespace OrganiseWebApi.EndPoints;
+
+public static class WeatherEndPoint
+{
+        public static WebApplication MapWeatherEndPoints(this WebApplication app)
+        {
+			    // The WeatherService is injected here
+                app.MapGet("/weatherforecast", (WeatherService wather) =>
+                {
+                    return wather.GetWeather();
+                })
+                .WithName("GetWeatherForecast");
+
+                return app;
+        }
+}
+```
+
 
 
 
 ## Modify your service class.
 
-![image](https://github.com/user-attachments/assets/050814b5-8628-479e-a18a-587f47ddbb45)
+```sh
+namespace OrganiseWebApi.Services;
+
+public class WeatherService
+{
+        public static readonly string[] summaries = new[]
+        {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
+
+        public IEnumerable<WeatherForecast> GetWeather()
+        {
+                return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+                         (
+                             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                             Random.Shared.Next(-20, 55),
+                             summaries[Random.Shared.Next(summaries.Length)]
+                         ))
+                        .ToArray();
+        }
+
+        public record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+        {
+            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        }
+}
+```
 
  
 ## Modify your Program.cs.
 Add the call to the new extension method that was created.
- 
-![image](https://github.com/user-attachments/assets/6e8a04d6-a553-444f-9aac-bdf9598d169e)
+
+```sh
+using OrganiseWebApi.Services;
+using OrganiseWebApi.EndPoints;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddOpenApi();
+
+
+//This allows the WeatherService to be injected
+//into any class/method that needs it.
+builder.Services.AddScoped<WeatherService>();
+// As Scoped, this class will be instantiated 
+// for every request and will last 
+// till the processing the whole request
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi(); //This will allows us to see the OpenApi specification document
+	                  // using this link: http://localhost:5003/openapi/v1.json
+}
+
+app.UseHttpsRedirection();
+
+//This will run the Extension
+//class/method.
+app.MapWeatherEndPoints();
+
+app.Run();
+
+```
+
 
 ## Compile and run.
 
@@ -89,22 +171,7 @@ Just so you know, the port may vary.
  ![image](https://github.com/user-attachments/assets/3c167303-410a-4d90-84de-080f5270a3ee)
 
 
-# Improving Dependency Injection (DI) in .NET
-
-> **Error:** The approach above works because the service method is static. However, this is not ideal for proper dependency injection.
-
-### ✅ **Recommended Fix: Using DI Properly**
-To ensure correct **Dependency Injection (DI)**, follow these steps:
-
-1. **Modify the `WeatherService`** by **removing the `static` modifier**.
-2. **Register `WeatherService`** in the `.NET Dependency Injection (DI) Container` in `Program.cs`.
-3. **Inject `WeatherService`** into the `WeatherEndpoints.cs` file instead of calling it statically.
-
-### ✅ **Fixed Code Snippets**
-
-#### **1️⃣ Register `WeatherService` in DI (`Program.cs`)**
-```csharp
-builder.Services.AddSingleton<WeatherForecastService>();
+![image](https://github.com/user-attachments/assets/f9c43f67-097d-4ec5-84da-cfa537713979)
 
 
  ---
