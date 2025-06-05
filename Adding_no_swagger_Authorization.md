@@ -20,7 +20,7 @@ dotnet new webapi -n jwtGen
 
 ```csharp
 cd jwtGen
-dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer –version 9.0.5
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 9.0.5
 dotnet add package System.IdentityModel.Tokens.Jwt --version 8.9.0
 ```
 
