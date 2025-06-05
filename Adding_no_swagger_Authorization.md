@@ -66,8 +66,8 @@ builder.Services.AddAuthentication("Bearer")
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = configuration["jwt:Issuer"],
-                        ValidAudience = configuration["jwt:Audience"],
+                        ValidIssuer = configuration["Jwt:Issuer"],
+                        ValidAudience = configuration["Jwt:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"] ?? throw new ArgumentNullException("JWT Secret Key is missing in appsettings.json")))
                 };
         });
@@ -87,11 +87,11 @@ if (app.Environment.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseHttpsRedirection(); //  Your code already has this line. Don’t need to add
+app.UseHttpsRedirection(); //  Your code already has this line. Don’t need to add.
 
 app.MapWeatherEndPoint(jwtService);
 
-app.Run(); //  Your code already has this line. Don’t need to add
+app.Run(); //  Your code already has this line. Don’t need to ad.d
 ```
 
 ## Create your EndPoint.
@@ -119,7 +119,7 @@ public static class WeatherEndPoint
 {
         public static WebApplication MapWeatherEndPoint(this WebApplication app, JwtService jwtService )
         {
-                app.MapPost("/weatherforecast", ([FromBody] LoginInfo loginInfo ) =>
+                app.MapPost("/weatherforecast", (LoginInfo loginInfo ) =>
                 {
                    if(loginInfo.LoginName == "Admin" && loginInfo.Password == "Admin123")
                    {
@@ -172,10 +172,13 @@ namespace jwtGen2.Services;
 public class JwtService
 {
    private readonly string _SECRETKEY;
+   private readonly IConfiguration _configuration;
 
    public JwtService(IConfiguration configuration)
    {
-        _SECRETKEY = configuration["Jwt:SecretKey"] ?? throw new ArgumentNullException("JWT secret key is missing in appsettings.json");
+        _configuration = configuration;
+        _SECRETKEY = _configuration["Jwt:SecretKey"] ?? 
+         throw new ArgumentNullException("JWT secret key is missing in appsettings.json");
    }
 
    public string GenerateToken(string username)
@@ -189,8 +192,8 @@ public class JwtService
         var key= new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_SECRETKEY));
         var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         var token = new JwtSecurityToken(
-               issuer: "http://localhost:5032",
-               audience: "http://localhost:5032",
+               issuer: _configuration["Jwt:Issuer"],
+               audience: _configuration["Jwt:Audience"],
                claims: claim,
                expires: DateTime.Now.AddHours(1),
                signingCredentials: cred);
@@ -233,6 +236,28 @@ public class WeatherService
         }
 }
 ```
+
+## Add these changes to your appsettings.json
+
+```sh
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Jwt":
+  {
+    "SecretKey": "xTGT1CO8kRluOWcLmSjNUrcdd7Mz5O5M6HffMq5uP+7W8joIhHxYK06js+lrn6GR",
+    "Audience" : "http://localhost:5203",
+    "Issuer": "http://localhost:5203",
+  }, 
+  "AllowedHosts": "*"
+}
+```
+
+**### Note: In the field SecretKey, you can use any string, use a random generator, or search on the internet for one.**
 
 ## Test your WebApi
 
