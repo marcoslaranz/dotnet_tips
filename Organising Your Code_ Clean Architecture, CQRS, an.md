@@ -4,6 +4,8 @@ This document provides practical guidance for structuring .NET applications with
 
 #### Disclaimer: Part of this document was created with AI help.
 
+### To see the complete document, access [here](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcoslaranz%2Fdotnet_tips%2Frefs%2Fheads%2Fmain%2FOrganising%2520your%2520code.docx&wdOrigin=BROWSELINK)
+
 ---
 
 ### **Business and Application Logic**
