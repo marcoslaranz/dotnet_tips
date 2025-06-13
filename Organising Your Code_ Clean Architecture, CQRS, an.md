@@ -381,7 +381,6 @@ app.Run();
 
 ---
 
-*This document is ready for publication on GitHub as a Markdown (.md) file and covers best practices for organizing code, leveraging CQRS, event sourcing, and structuring minimal WebAPI projects in .NET.*[^1]
 
 <div style="text-align: center">⁂</div>
 
