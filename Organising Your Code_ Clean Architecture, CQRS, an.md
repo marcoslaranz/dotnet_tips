@@ -1,8 +1,8 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
 ## Organising Your Code: Clean Architecture, CQRS, and Minimal WebAPI in .NET
 
 This document provides practical guidance for structuring .NET applications with a focus on clean architecture, CQRS, event sourcing, and organizing minimal WebAPI projects for scalability and maintainability.
+
+#### Disclaimer: Part of this document was created with AI help.
 
 ---
 
