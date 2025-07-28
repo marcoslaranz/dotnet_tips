@@ -76,7 +76,7 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build(); //  Your code already has this line. Don’t need to add
 
-var jwtService = app.Services.GetRequiredService<JwtService>();
+var jwtService = app.Services.GetRequiredService<JwtService>(); //This is an ugly option as the JwtService will be provided by the DI already.
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -89,7 +89,7 @@ app.UseAuthorization();
 
 app.UseHttpsRedirection(); //  Your code already has this line. Don’t need to add.
 
-app.MapWeatherEndPoint(jwtService);
+app.MapWeatherEndPoint(jwtService); //This is an ugly option as the JwtService will be provided by the DI already.
 
 app.Run(); //  Your code already has this line. Don’t need to ad.d
 ```
